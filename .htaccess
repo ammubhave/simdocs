@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/docs/build/
+RewriteRule ^(.*)$ /docs/build/$1
