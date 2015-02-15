@@ -488,15 +488,22 @@ html, body {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
+    color: $aside-text-color;
+    border: 1px solid transparent;
+    border-color: $aside-border-color;
     line-height: 1.6;
 
     &.warning {
       background-color: $aside-warning-bg;
+      border-color: $aside-warning-border-color;
+      color: $aside-warning-text-color;
       @include text-shadow(0 1px 0 lighten($aside-warning-bg, 15%));
     }
 
     &.success {
       background-color: $aside-success-bg;
+      border-color: $aside-success-border-color;
+      color: $aside-success-text-color;
       @include text-shadow(0 1px 0 lighten($aside-success-bg, 15%));
     }
   }
