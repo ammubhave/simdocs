@@ -13,7 +13,15 @@ Welcome to the Simmons Docs!
 
 If you want to create a new page, checkout [Sample Docs](sample.html) for an example.
 
+# Getting Started
+
+* [Django](django.html)
+
 # Projects
+
+## Simmons API
+
+Read the docs on [Simmons API][simmons-api.html]
 
 ## 7K Display
 [simmons-tech-7k@mit.edu](mailto:simmons-tech-7k@mit.edu)
