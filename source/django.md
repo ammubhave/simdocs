@@ -14,6 +14,8 @@ Simmons Admin Dashboard supports Django websites using WSGI.
 
 Create a .htaccess file in your root directory.
 
+> Replace APP_NAME and PATH with the appropriate parameters.
+
 ```shell
 AddHandler wsgi-script .py
 Options +ExecCGI
@@ -37,6 +39,12 @@ Create a copy of `settings.py` as `settings_local.py`. This file will be your lo
 ## manage.py
 
 Change the line `os.environ.setdefault("DJANGO_SETTINGS_MODULE", "APP_NAME.settings")` to `os.environ.setdefault("DJANGO_SETTINGS_MODULE", "APP_NAME.settings_local")`
+
+## APP_NAME/settings.py
+
+If settings DEBUG to False, you should add the hostname where the website will be deployed to (e.g. simmons-dev.mit.edu or simmons.mit.edu) to ALLOWED_HOSTS setting.
+
+In STATIC_URL, change '/static' to '/APP_NAME/static'.
 
 ## APP_NAME/wsgi.py
 

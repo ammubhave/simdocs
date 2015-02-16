@@ -41,6 +41,10 @@
 <h2 id=".htaccess">.htaccess</h2>
 
 <p>Create a .htaccess file in your root directory.</p>
+
+<blockquote>
+<p>Replace APP_NAME and PATH with the appropriate parameters.</p>
+</blockquote>
 <pre><code class="highlight shell">AddHandler wsgi-script .py
 Options +ExecCGI
 
@@ -63,6 +67,12 @@ RewriteRule ^<span class="o">(</span>.<span class="k">*</span><span class="o">)<
 <h2 id="manage.py">manage.py</h2>
 
 <p>Change the line <code class="prettyprint">os.environ.setdefault(&quot;DJANGO_SETTINGS_MODULE&quot;, &quot;APP_NAME.settings&quot;)</code> to <code class="prettyprint">os.environ.setdefault(&quot;DJANGO_SETTINGS_MODULE&quot;, &quot;APP_NAME.settings_local&quot;)</code></p>
+
+<h2 id="app_name/settings.py">APP_NAME/settings.py</h2>
+
+<p>If settings DEBUG to False, you should add the hostname where the website will be deployed to (e.g. simmons-dev.mit.edu or simmons.mit.edu) to ALLOWED_HOSTS setting.</p>
+
+<p>In STATIC_URL, change &rsquo;/static&rsquo; to &rsquo;/APP_NAME/static&rsquo;.</p>
 
 <h2 id="app_name/wsgi.py">APP_NAME/wsgi.py</h2>
 
