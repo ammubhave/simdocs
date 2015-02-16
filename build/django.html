@@ -11,11 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
       <script src="javascripts/all.js" type="text/javascript"></script>
 
-      <script>
-        $(function() {
-          setupLanguages(["shell","python"]);
-        });
-      </script>
   </head>
 
   <body class="django">
@@ -27,10 +22,6 @@
     </a>
     <div class="tocify-wrapper">
       <a href="index.html"><img src="images/logo.png" /></a>
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="python">python</a>
-        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -80,12 +71,28 @@ RewriteRule ^<span class="o">(</span>.<span class="k">*</span><span class="o">)<
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))</span>
 </code></pre>
 
+<h1 id="authentication">Authentication</h1>
+
+<blockquote>
+<p>To allow access to only MIT users add this to .htaccess:</p>
+</blockquote>
+<pre><code class="highlight plaintext">SSLVerifyClient require
+</code></pre>
+
+<blockquote>
+<p>To only allow access to a admins, add:</p>
+</blockquote>
+<pre><code class="highlight plaintext">SSLOptions +FakeBasicAuth +StdEnvVars
+
+AuthUserFile /var/www/apache_config/simadmin/.htpasswd
+AuthName "APP NAME Authentication"
+AuthType Basic
+Require valid-user
+AuthBasicProvider file
+</code></pre>
+
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="python">python</a>
-          </div>
       </div>
     </div>
   </body>

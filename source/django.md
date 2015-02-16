@@ -1,10 +1,6 @@
 ---
 title: Getting Started with Django
 
-language_tabs:
-  - shell
-  - python
-
 search: true
 ---
 
@@ -49,4 +45,24 @@ Add these lines right after the settings import
 ```python
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+```
+
+# Authentication
+
+> To allow access to only MIT users add this to .htaccess:
+
+```
+SSLVerifyClient require
+```
+
+> To only allow access to a admins, add:
+
+```
+SSLOptions +FakeBasicAuth +StdEnvVars
+
+AuthUserFile /var/www/apache_config/simadmin/.htpasswd
+AuthName "APP NAME Authentication"
+AuthType Basic
+Require valid-user
+AuthBasicProvider file
 ```
