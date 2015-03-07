@@ -64,6 +64,29 @@ sim.people.all(function (data) {
 });
 ```
 
+> `data` is list structured like this:
+
+```json
+[
+  "...",
+  {
+    "...": "..."
+  },
+  {
+    "username": "ambhave",
+    "firstname": "Amol",
+    "lastname": "Bhave",
+    "title": "Whack",
+    "room": 337,
+    "year": "2017"
+  },
+  {
+    "...": "..."
+  },
+  "..."
+]
+```
+
 To get a list of all residents, use the `sim.people.all(success)` method. If the call was succeeds, the `success` callback will be called with the parameter `data` begin a list of all residents.
 
 ## Get the profile of a specific person
@@ -75,6 +98,26 @@ sim.people.get(username, function (data) {
     console.log('Here is all the information for the username ' + username);
     console.log(data);
 });
+```
+> `data` is a dictionary structured like this:
+
+```json
+{
+  "username": "ambhave",
+  "firstname": "Amol",
+  "lastname": "Bhave",
+  "title": "Whack",
+  "room": 337,
+  "year": "2017",
+  "home_city": "Shire,",
+  "home_state": "Kingdom of Arnor,",
+  "home_country": "Eriador",
+  "cellphone": "1234567890",
+  "homepage": "http://www.nyan.cat/",
+  "quote": "Three Rings for the Elven-kings is my quote.",
+  "type": "Undergraduate",
+  "email": "ambhave@mit.edu"
+}
 ```
 
 # Example
