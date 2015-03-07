@@ -36,7 +36,7 @@ You must replace `CLIENT_ID` with your Client ID.
 
 ## Testing on your local machine
 You can use the api from `localhost`.
-You need to use the client id as `efVV8LnWW5f6XxmJE3xexSjAPgjr0nMCyAyMGMvn`
+You need to use the client id as `LOCAL_TEST_APPLICATION`
 You still need to knock on Amol's door to get authorization to use the API on a non-localhost host.
 
 You can run a local server on `localhost` by running the command `python -m SimpleHTTPServer 8000` from the directory where you want to server. Remember that there is CORS check for localhost.
@@ -132,7 +132,7 @@ The following is an example HTML using the API.
 
     <script>
         sim.init({
-            'clientid': 'efVV8LnWW5f6XxmJE3xexSjAPgjr0nMCyAyMGMvn'
+            'clientid': 'LOCAL_TEST_APPLICATION'
         });
         sim.login();
         sim.people.all(function(data) {
