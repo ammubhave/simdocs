@@ -68,7 +68,7 @@ You must replace `CLIENT_ID` with your Client ID.
 <h2 id="testing-on-your-local-machine">Testing on your local machine</h2>
 
 <p>You can use the api from <code class="prettyprint">localhost</code>.
-You need to use the client id as <code class="prettyprint">efVV8LnWW5f6XxmJE3xexSjAPgjr0nMCyAyMGMvn</code>
+You need to use the client id as <code class="prettyprint">LOCAL_TEST_APPLICATION</code>
 You still need to knock on Amol&rsquo;s door to get authorization to use the API on a non-localhost host.</p>
 
 <p>You can run a local server on <code class="prettyprint">localhost</code> by running the command <code class="prettyprint">python -m SimpleHTTPServer 8000</code> from the directory where you want to server. Remember that there is CORS check for localhost.</p>
@@ -157,7 +157,7 @@ You still need to knock on Amol&rsquo;s door to get authorization to use the API
 
     <span class="nt">&lt;script&gt;</span>
         <span class="nx">sim</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
-            <span class="s1">'clientid'</span><span class="p">:</span> <span class="s1">'efVV8LnWW5f6XxmJE3xexSjAPgjr0nMCyAyMGMvn'</span>
+            <span class="s1">'clientid'</span><span class="p">:</span> <span class="s1">'LOCAL_TEST_APPLICATION'</span>
         <span class="p">});</span>
         <span class="nx">sim</span><span class="p">.</span><span class="nx">login</span><span class="p">();</span>
         <span class="nx">sim</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
