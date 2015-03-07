@@ -21,7 +21,7 @@ If you want to create a new page, checkout [Sample Docs](sample.html) for an exa
 
 ## Simmons API
 
-Read the docs on [Simmons API][simmons-api.html]
+Read the docs on [Simmons API](simmons-api.html)
 
 ## 7K Display
 [simmons-tech-7k@mit.edu](mailto:simmons-tech-7k@mit.edu)
